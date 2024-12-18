@@ -1,4 +1,4 @@
-import { Schema, Types } from "mongoose";
+import { model, Schema, Types } from "mongoose";
 
 interface iPost {
   title: string;
@@ -30,3 +30,4 @@ const postModel = new Schema<iPostData>({
     },
   ],
 });
+export default model<iPostData>("posts", postModel);
