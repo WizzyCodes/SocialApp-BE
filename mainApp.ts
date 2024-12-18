@@ -9,7 +9,7 @@ export const mainApp = async (app: Application) => {
         });
       } catch (error) {
         res.status(404).json({
-          return error
+          message: "error",
         });
       }
     });
