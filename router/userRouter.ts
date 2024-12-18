@@ -7,6 +7,7 @@ import {
 } from "../controller/userController";
 // import { addAsFriend, unFriend } from "../controller/friendController";
 import { upload } from "../util/multer";
+import { addFriend, unfriend } from "../controller/friendController";
 
 const userRouter: any = Router();
 
@@ -17,7 +18,7 @@ userRouter.route("/get-one-user/:userID").get(readOneUser);
 userRouter.route("/get-all-users").get(readAllUser);
 
 // // friends
-// router.route("/add-friend/:userID/:friendID").patch(addAsFriend);
-// router.route("/un-friend/:userID/:friendID").patch(unFriend);
+userRouter.route("/add-friend/:userID/:friendID").patch(addFriend);
+userRouter.route("/un-friend/:userID/:friendID").patch(unfriend);
 
 export default userRouter;
