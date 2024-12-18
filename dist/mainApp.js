@@ -14,9 +14,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.mainApp = void 0;
 const userRouter_1 = __importDefault(require("./router/userRouter"));
+const commentRouter_1 = __importDefault(require("./router/commentRouter"));
+const postRouter_1 = __importDefault(require("./router/postRouter"));
 const mainApp = (app) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         app.use("/api/user", userRouter_1.default);
+        app.use("/api/comment", commentRouter_1.default);
+        app.use("/api/post", postRouter_1.default);
         app.get("/", (req, res) => {
             try {
                 res.status(200).json({
