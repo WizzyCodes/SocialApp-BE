@@ -31,10 +31,7 @@ export const createComment = async (req: Request, res: Response) => {
   }
 };
 
-<<<<<<< HEAD
 import userModel from "../model/userModel";
-import postModel from "../model/postModel";
-import { Types } from "mongoose";
 
 export const createComment2 = async (
   req: Request,
@@ -111,7 +108,7 @@ export const getAllCommentsOnPost = async (req: Request, res: Response) => {
     });
   }
 };
-=======
+
 export const ReadComment = async (req: Request, res: Response) => {
   try {
     const { postID } = req.params;
@@ -152,4 +149,3 @@ export const ReadComment = async (req: Request, res: Response) => {
 //     return res.status(404).json({ message: error, status: 404 });
 //   }
 // };
->>>>>>> affd04b710dd231f9c7cbdb9cd2f0efc810943e7
