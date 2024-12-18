@@ -2,9 +2,9 @@ import { Router } from "express";
 import { createPost, readMainPost } from "../controller/postController";
 import { upload } from "../util/multer";
 
-const router: any = Router();
+const postRouter: any = Router();
 
-router.route("/create-post/:userID").post(upload, createPost);
-router.route("/read-post/:userID").get(readMainPost);
+postRouter.route("/create-post/:userID").post(upload, createPost);
+postRouter.route("/read-post/:userID").get(readMainPost);
 
-export default router;
+export default postRouter;
