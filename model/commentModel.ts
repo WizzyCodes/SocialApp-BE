@@ -1,7 +1,7 @@
 import { Document, Schema, model, Types } from "mongoose";
 
 interface iComment {
-  userId: string;
+  userID: string;
   title: string;
 }
 
@@ -12,7 +12,7 @@ const commentPostModel = new Schema<iCommentData>(
     title: {
       type: String,
     },
-    userId: {
+    userID: {
       type: String,
     },
   },
