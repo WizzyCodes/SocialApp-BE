@@ -12,6 +12,5 @@ const commentRouter: any = Router();
 commentRouter.route("/post/:postID/comments").get(getAllCommentsOnPost);
 commentRouter.route("/create-comment").post(createComment);
 commentRouter.route("/read-comment").get(ReadComment);
-export default commentRouter;
-
 // router.route("/delete-comment").get(DelateOneComment);
+export default commentRouter;
