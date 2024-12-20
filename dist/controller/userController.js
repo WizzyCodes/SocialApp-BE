@@ -34,7 +34,7 @@ const createUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
         });
         (0, removeFileUpload_1.removeFileUpload)(folderPath);
         return res.status(201).json({
-            message: "user created successfully",
+            message: "Your account has been created successfully",
             status: 201,
             data: user,
         });
@@ -58,7 +58,7 @@ const logInUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             const check = yield bcrypt_1.default.compare(password, user.password);
             if (check) {
                 return res.status(201).json({
-                    message: "user logged in successfully",
+                    message: "Login Successful",
                     status: 201,
                     data: user,
                 });
@@ -66,14 +66,14 @@ const logInUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             else {
                 return res.status(404).json({
                     status: 404,
-                    message: "error reading  password, your password is incorrect",
+                    message: "Your password is incorrect",
                 });
             }
         }
         else {
             return res.status(404).json({
                 status: 404,
-                message: "error reading email address, your email address does not exist",
+                message: "Your email address is not correct",
             });
         }
     }
