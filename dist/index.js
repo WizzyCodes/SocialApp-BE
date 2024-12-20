@@ -10,9 +10,10 @@ const mainApp_1 = require("./mainApp");
 const dbConfig_1 = require("./util/dbConfig");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
+const port = parseInt(process.env.PORT);
 app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 (0, mainApp_1.mainApp)(app);
-app.listen(parseInt(process.env.PORT), () => {
+app.listen(port, () => {
     (0, dbConfig_1.dbConfig)();
 });
